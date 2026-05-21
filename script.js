@@ -22,7 +22,7 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 let paddle = {
-    width: 150,  // Bigger
+    width: 150,  // Bigger  // Bigger
     height: 15,
     x: (canvas.width - 100) / 2,
     y: canvas.height - 25,
@@ -357,7 +357,7 @@ function createPowerUp(x, y) {
                 type: powerup.type,
                 vx: 0,
                 vy: 2,
-                width: 25,
+    width: 150,  // Bigger
                 height: 25,
                 active: true
             };
@@ -395,7 +395,7 @@ function activatePowerUp(type) {
 
 function updatePowerUpDurations() {
     const currentTime = Date.now();
-    const POWER_UP_DURATION = 10000; // 10 seconds in milliseconds
+const POWER_UP_DURATION = 15000;  // 15 seconds
 
     // Multi-Ball
     if (gameState.powerups.multiBall.active) {
@@ -479,7 +479,7 @@ function autoFireBullets() {
             gameState.bullets.push({
                 x: paddle.x + paddle.width / 2,
                 y: paddle.y - 5,
-                width: 4,
+    width: 150,  // Bigger
                 height: 15,
                 vy: -12,
                 active: true
