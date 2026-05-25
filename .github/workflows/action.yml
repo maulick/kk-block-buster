@@ -17,6 +17,9 @@ jobs:
     needs: build
     steps:
       - name: Deploy to Blockbuster
+      - uses: mscoutermarsh/ascii-art-action@master
+        with:
+          text: 'KodeKloud Block Buster'
         run: |
           echo "Deploying to the Blockbuster server..."
           echo "Deployment successful! Your project is now live."
